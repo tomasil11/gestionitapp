@@ -1,0 +1,474 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    --subtle-white: #f9f9f9;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    gap: 30px;
+    background: #caf0f8;
+    color:#000;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1280px;
+    margin: 10px auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: fr;
+    grid-template-rows: 90px
+    auto
+    40px;
+    grid-template-areas: "header"
+    "section"
+    "footer";
+}
+
+.contenedor header,
+.contenedor section,
+.contenedor footer {
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.contenedor header {
+  background: #0077b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+}
+
+.contenedor section {
+    background: #00b4d8;
+    grid-area: section;
+}
+
+.contenedor footer {
+    background: #ffd166;
+    display: block;
+    text-align: center;
+    padding-right: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    grid-area: footer;
+}
+
+.contenedor footer .version {
+    float: right;
+}
+
+.contenedor footer img {
+    width: 3%;
+    height: 15px;
+}
+
+.contenedor nav {
+    width: 200px;
+    padding: 0;
+    margin: 90px 0;
+    background: #fff;
+    grid-area: nav;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    
+} 
+
+.imgMenu {
+    float: left;
+    width: 12%;
+    height: 40px;
+}
+
+.imgEscudo {
+    float: right;
+    width: 15%;
+    height: 60px;
+}
+
+.titutoCentral {
+    display: inline-block;
+    color:#f8edeb;
+    margin: 0 auto;
+}
+
+.contenedor nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.contenedor nav ul li {
+    box-sizing: border-box;
+    color:#000;
+    background: linear-gradient(70deg,  #118ab2, #edf2f4, #06d6a0);
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.contenedor nav ul ul a {
+    background: #033F63;
+    
+}
+
+.contenedor nav ul ul {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.contenedor nav .nav {
+    display:none;
+}
+
+.contenedor nav ul li:hover ul {
+    height: auto;
+}
+
+.contenedor section .content {
+    margin-top: 1.5rem;
+}
+
+[data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: block;
+} 
+
+.menuNavega {
+    display: flex;
+}
+
+.contenedor .active2 {
+    background-color: #000;
+}
+
+.calendar {
+    background:#fff;
+    /*width: 80%;
+    max-width: 600px;*/
+    margin: 1em auto;
+    padding: .5em auto;
+    border-radius: 5px;
+  
+}
+
+.calendar__info {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.calendar__prev, .calendar__next {
+    color:#033F63;
+    font-size: 1.3em;
+}
+
+.calendar__prev {
+    margin-right: auto;
+}
+
+.calendar__next {
+    margin-left: auto;
+}
+
+.calendar__month, .calendar_year {
+    padding: .5em 1em;
+}
+
+.calendar__week, .calendar__dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__item {
+    text-align: center;
+    line-height: 2;
+}
+
+.calendar__today {
+    background: lightcoral;
+    color: #fff;
+    width: 50%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.calendar__event1 {
+    background: #8338ec;
+    color: #fff;
+    width: 30%;
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px 5px;
+}
+
+.verCajaEvento1 {
+    background: #bdb2ff;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0.5px auto;
+    padding: 5px 5px;
+    font-style: italic;
+}
+
+.calendar__event2 {
+    background: #ef476f;
+    color: #fff;
+    width: 30%;
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px 5px;
+}
+
+.verCajaEvento2 {
+    background: #f4978e;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0.5px auto;
+    padding: 5px 5px;
+    font-style: italic;
+}
+
+.calendar__event3 {
+    background: #fb8500;
+    color: #fff;
+    width: 30%;
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px 5px;
+}
+
+.verCajaEvento3 {
+    background: #ffc857;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0.5px auto;
+    padding: 5px 5px;
+    font-style: italic;
+}
+
+.eventosDia {
+    display: block;
+    background:#fff;
+    /*width: 80%;
+    max-width: 600px;*/
+    margin: auto;
+    padding: 1px 0 10px 5px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.crearEvento {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 3px 0;
+}
+
+.verCajaEvento {
+    background-color: #1e96fc;
+    border-radius: 4px;
+    width: 90%;
+    margin: 0.5px auto;
+    padding: 5px 5px;
+    font-style: italic;
+}
+
+.verBotonesEdicion .editarEvento {
+    float: left;
+    
+}
+
+.verBotonesEdicion .eliminaEvento {
+    float: left;
+    margin: 0 8px;
+}
+
+.verBotonesEdicion img {
+    width: 60px;
+    height: 22px;
+}
+
+.verContenidoEvento .verFondo {
+    background-color: #82e9da;
+    width: 90%;
+    margin: 0px auto;
+    padding: 2px 5px;
+}
+
+.verBotonesEdicion {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 2px 5px;
+}
+
+.formEvento {
+    display: block;
+    background:#fff;
+    /*width: 80%;
+    max-width: 600px;*/
+    margin: 10px auto;
+    padding: 1px 0 10px 5px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.formularioEdita {
+    display: block;
+    background:#fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 1px 0 10px 5px;
+    border-radius: 5px;
+}
+
+.contenedor .formEvento #inserEvento {
+    width: 80%;
+    padding: 10px 60px;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botones {
+    display: block;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+.contenedor .claseBtnIngresa {
+	width: 130px;
+	margin: 12px 25%;
+	padding: 4px 10px;
+	font: bold 0.8em sans-serif;
+  	border: 3px solid #030789;
+	border-radius: 5px;
+	cursor: pointer;
+	transform: rotate(-1.5deg);
+}
+
+.contenedor .botonCancela {
+	width: 120px;
+	margin: 12px 25%;
+	padding: 4px 10px;
+	font: bold 0.8em sans-serif;
+  	border: 3px solid #e4e4e9;
+	border-radius: 5px;
+	cursor: pointer;
+	transform: rotate(-1.5deg);
+}
+
+.botones img {
+    width: 35%;
+    height: 25px;
+}
+
+.mesDia {
+    display: block;
+    margin: 2px auto;
+    text-align: center;
+    font-size: 14px;
+    color: #033F63;
+    font-style: italic;
+}
+
+.contenedor .mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor .nomostrar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenedor .ocultar {
+    display: none;
+}
+
+.tituloDia {
+    display: block;
+}
+
+/*      Estilos a los íconos     */
+.imgIcon {
+    width: 40px;
+    height: 40px;
+}
+
+/*    Estilos a las listas        */
+
+.definicion {
+    margin-left: 10px;
+    text-align: justify;
+    
+}
+
+/* Estilos del texto   */
+
+.contenedor .parrafos01 {
+    background:  #f4f4f4;
+    border-radius: 5px;
+    text-align: justify;
+	padding: 10px;
+	gap: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+a {
+    display: block;
+}
+
+main, scroll-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    background: #e7e9c4;
+    width: 95%;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+scroll-container {
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .nomEmpresa {
+    font-weight: bold;
+  }
+

@@ -1,0 +1,86 @@
+.contenedor .contenedorAcordeon {
+	background: #edf2f4 ;
+	border-radius: 5px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+summary {
+	background:  #b5e48c;
+	color: #1C1C1C;
+	padding: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: justify;
+}
+
+.claseSummaryGrado {
+	background: #cbf3f0;
+}
+
+.pAcordeon {
+	padding: 5px;
+	background: white;
+	color: #2E2E2E;
+	text-align: justify;
+}
+
+.barraPrincipal {
+	background: #2E64FE;
+	color:aliceblue;
+}
+
+.barraPrincipalsiee {
+	background: #c7f9cc;
+	color:#2E2E2E;
+}
+
+.barraPrincipalArt {
+	background: #ffadad;
+	color:#2E2E2E;
+}
+
+.barraPrincipalNat {
+	background: #ffd6a5;
+	color:#2E2E2E;
+}
+
+.barraPrincipalSoc {
+	background: #fdffb6;
+}
+
+.barraPrincipalEfis {
+	background: #caffbf;
+}
+
+.barraPrincipalInf {
+	background: #ffd97d;
+}
+
+.barraPrincipalCEco {
+	background: #ccd5ae;
+}
+
+.barraPrincipalEmp {
+	background: #b5e48c;
+}
+
+.barraPrincipalIng {
+	background: #ddbea9;
+}
+
+.barraPrincipalLen {
+	background: #b9929f;
+}
+
+.barraPrincipalMat {
+	background: #9c528b;
+}
+
+.barraPrincipalFil {
+	background: #c4e24e;
+}
+
