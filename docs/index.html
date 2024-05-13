@@ -14,7 +14,7 @@
 <div class="contenedor">
     <header id="encabezado" name="miEncabezado" class="header">
        
-        <img src="img/menu01.png" class="imgMenu" id="imgMen">
+        <img src="img/menu02.png" class="imgMenu" id="imgMen">
         <h2 class="titutoCentral" id="miTituloCentral">Home</h2>
         <img src="img/escudo_itah.png" class="imgEscudo">
     </header>
@@ -43,7 +43,11 @@
         </p>
         </div>
         
-        <div data-content="cronograma" id="cronograma" title="Cronograma">
+
+       
+        
+        <div data-content="cronograma" id="cronograma" title="Cronograma" class="crono">
+            <div class="scrollContenidoCrono">
             <div class="calendar">
                 <div class="calendar__info">
                     <div class="calendar__prev" id="prev-month">&#9664;</div>
@@ -105,18 +109,22 @@
                     
                 </form>
             </div>
+        
         </div>
+    
+    </div>
 
 <!-- INICIA EL CÓDIGO DEL PLAN DE ÁREA-->
       
-    <div data-content="planArea" id="planArea" title="Plan de Área">
-          
+    <div data-content="planArea" id="planArea" title="Plan de Área" class="clasePlanArea">
+          <scroll-container>
             <!-- INICIO CONTENIDO AŔEA-->
             <details>
                 <summary class="barraPrincipalCEco">
                     Área: Preescolar
                 </summary>
                 <scroll-container>
+                    <scroll-page>
                     <div class="contenedorAcordeon">
                         <img src="img/planAreaPdfs/preescolar/preescolar_00001.jpg" width="100%" height="700px">
                         <img src="img/planAreaPdfs/preescolar/preescolar_00002.jpg" width="100%" height="700px">
@@ -130,6 +138,7 @@
                         <img src="img/planAreaPdfs/preescolar/preescolar_00010.jpg" width="100%" height="700px">
                         <img src="img/planAreaPdfs/preescolar/preescolar_00011.jpg" width="100%" height="700px">
                     </div>
+                </scroll-page>
                 </scroll-container>
                 </details>
             <!-- FIN CONTENIDO ÁREA-->
@@ -1319,12 +1328,13 @@
                 </scroll-container>
                 </details>
             <!-- FIN CONTENIDO ÁREA-->
-        
+        </scroll-container>
     </div>
 <!--FINALIZA CÓDIGO PLAN DE ÁREA-->
 
 <!-- INICIA EL CÓDIGO DEL SIEE-->
-        <div data-content="siee" id="siee" title="SIEP">
+        <div data-content="siee" id="siee" title="Sistema de Evaluación">
+            <scroll-container>
             <p class="parrafos01">Por medio del cual se reglamenta y se adopta el Sistema Institucional de Evaluación y 
                 promoción (S.I.E.P) en el INSTITUTO TÉCNICO AGROPECUARIO del municipio Hato.
             </p>
@@ -2199,7 +2209,7 @@
 
 <br><hr><br>
      
-
+</scroll-container>
     
 </div>
 <!-- FINALIZA EL CÓDIGO DEL SIEE-->        
@@ -2234,7 +2244,7 @@
         </p>
             
                 
-            </scroll-container>
+           
         
             <br><hr><br>
 
@@ -2833,7 +2843,7 @@
 </details>
 
 <hr>
-
+</scroll-container>
 
 </div>
 <!-- HASTA AQUÍ EL ACORDEÓN PRINCIPAL-->
@@ -2848,7 +2858,7 @@
     </section>
     
     <footer id="piePagina" name="mi_piePagina" class="footer">
-        <span class="nomEmpresa"><img src="img/derechosReservados.png"> LiTe</span><span class="version">Versión 1.0 * 2023</span>
+        <span class="nomEmpresa"><img src="img/derechosReservados.png">LiTe</span><span class="version">INSTITUTO TÉCNICO AGROPECUARIO</span>
     </footer>
 
 </div>
