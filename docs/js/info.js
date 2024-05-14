@@ -6,19 +6,26 @@ let varHoraInicio, varObservacion;
 */
 baseDatosCrono = [
     {
-    mesDia : '6620246',
+    mesDia : '5620245',
     tipoEvento : "3",
     evento : 'Cumpleaños profesor Edwin Vargas Galvis',
     horaInicio : '',
     observacion : '',
     },
     {
-    mesDia : '51620245',
+    mesDia : '41620244',
     tipoEvento : "2",
     evento : 'Día de la Santandereanidad',
     horaInicio : '',
     observacion : 'Responsable: Grado Undécimo',
-    }
+    },
+    {
+    mesDia : '62320246',
+    tipoEvento : "1",
+    evento : 'Actividad familiar',
+    horaInicio : '',
+    observacion : '',
+        }
 
 ]
 
